@@ -1,0 +1,15 @@
+<template lang="pug">
+	.card.mb-4
+		.card-content
+			h4.title.is-4
+				slot(name="title") Title default
+			slot(name="content") Content default
+		.card-footer
+			slot(name="footer")
+</template>
+
+<script>
+export default {
+	name: "DataCards",
+}
+</script>
