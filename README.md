@@ -1,6 +1,6 @@
 # Multi-Step Form Firebase + Vue App
 
-Store and query multipage form data with Firebase + Vuex + Bulma CSS
+Store and query multipage form data with Firebase + Vuex + Bulma CSS with some accessibility
 Auth with Firebase
 
 ## Project setup
