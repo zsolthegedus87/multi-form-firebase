@@ -19,9 +19,9 @@
 
 			.level
 				div
-					a.button.is-primary.is-light(@click="backPage") Back to previous step
-				div
 					button.button.is-primary(type="submit") Finish
+				div
+					a.button.is-primary.is-light(href="#", @click="backPage") Back to previous step
 
 </template>
 <script>
@@ -73,4 +73,12 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "../../common/css/variables";
+
+.level div:nth-child(1) {
+	order: 2;
+}
+
+.level div:nth-child(2) {
+	order: 1;
+}
 </style>

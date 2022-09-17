@@ -6,10 +6,10 @@
 			MailForm(v-if="step === 3", @submit-mail-data="submitMailData", @back-page="backPage")
 		.message.is-success(v-if="step === 4 && !submitted")
 			.message-header
-				h3 Confirmation
+				h3 Confirmation page
 			.message-body(v-if="formData")
 				DataCards
-					template(v-slot:title) Personal
+					template(v-slot:title) Personal details
 					template(v-slot:content)
 						dl
 							dt.has-text-weight-bold First name
@@ -22,9 +22,9 @@
 							dd {{ formData.user.age }}
 					template(v-slot:footer)
 						p.card-footer-item
-							a.button.is-warning.is-light(@click="step = 1") edit personal details
+							a.button.is-warning.is-light(href="", @click="step = 1") edit personal details
 				DataCards
-					template(v-slot:title) Address
+					template(v-slot:title) Address details
 					template(v-slot:content)
 						dl
 							dt.has-text-weight-bold Street
@@ -35,16 +35,16 @@
 							dd {{ formData.address.country }}
 					template(v-slot:footer)
 						p.card-footer-item
-							a.button.is-warning.is-light(@click="step = 2") edit address details
+							a.button.is-warning.is-light(href="", @click="step = 2") edit address details
 				DataCards
-					template(v-slot:title) Contact
+					template(v-slot:title) Contact details
 					template(v-slot:content)
 						dl
 							dt.has-text-weight-bold Mail
 							dd {{ formData.mail }}
 					template(v-slot:footer)
 						p.card-footer-item
-							a.button.is-warning.is-light(@click="step = 3") edit contact details
+							a.button.is-warning.is-light(href="", @click="step = 3") edit contact details
 				.level
 					.level-item.has-text-centered
 					div
