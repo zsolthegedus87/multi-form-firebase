@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
 Vue.use(VueRouter);
 
@@ -50,11 +50,11 @@ const routes = [
 		name: "secret",
 		component: () =>
 			import(/* webpackChunkname: "about" */ "../views/SecretView.vue"),
-		meta: { requiresAuth: true }
+		meta: { requiresAuth: true },
 	},
 	{
 		path: "*",
-		component: HomeView
+		component: HomeView,
 	},
 ];
 
@@ -64,7 +64,7 @@ const index = new VueRouter({
 });
 
 index.beforeEach((to, from, next) => {
-	const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+	const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
 	const isAuthenticated = firebase.auth().currentUser;
 	if (requiresAuth && !isAuthenticated) {
 		next("/login");

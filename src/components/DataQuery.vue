@@ -105,6 +105,6 @@ export default {
 					console.error("Error getting document:", error);
 				});
 		},
-	}
+	},
 };
 </script>

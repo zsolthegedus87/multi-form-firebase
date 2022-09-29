@@ -10,13 +10,12 @@
 					| Log in
 </template>
 <script>
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
 export default {
 	name: "NavbarEnd",
-	components: {
-	},
+	components: {},
 	data() {
 		return {
 			loggedIn: false,
@@ -38,7 +37,7 @@ export default {
 				.then(() => {
 					this.$router.push("/home");
 				});
-		}
-	}
+		},
+	},
 };
 </script>

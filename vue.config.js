@@ -7,6 +7,6 @@ module.exports = {
 	},
 	publicPath: "./",
 	devServer: {
-		proxy: 'https://console.firebase.google.com/u/0/project/multi-page-form-hzs/',
-	}
+		proxy: "https://console.firebase.google.com/u/0/project/multi-page-form-hzs/",
+	},
 };

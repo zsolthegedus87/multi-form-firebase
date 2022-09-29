@@ -83,7 +83,7 @@ export default {
 		PersonalForm,
 		MailForm,
 		DataCards,
-		Steps
+		Steps,
 	},
 	data() {
 		return {
@@ -92,10 +92,10 @@ export default {
 			formData: {
 				user: {},
 				address: {},
-				mail: null
+				mail: null,
 			},
 			submitted: false,
-			token: null
+			token: null,
 		};
 	},
 	methods: {
@@ -116,7 +116,7 @@ export default {
 		},
 		sendData() {
 			const self = this;
-			db.collection('formData')
+			db.collection("formData")
 				.add(this.formData)
 				.then(function (docRef) {
 					self.token = docRef.id;
@@ -128,9 +128,9 @@ export default {
 		},
 		copyToClipboard() {
 			this.$refs.token.focus();
-			document.execCommand('copy');
-			this.$refs.copy.text = 'copied';
-		}
+			document.execCommand("copy");
+			this.$refs.copy.text = "copied";
+		},
 	},
 };
 </script>

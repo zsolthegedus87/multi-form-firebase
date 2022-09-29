@@ -13,7 +13,7 @@ import DataQuery from "@/components/DataQuery";
 export default {
 	name: "QueryView",
 	components: {
-		DataQuery
+		DataQuery,
 	},
 	data() {
 		return {
@@ -53,6 +53,6 @@ export default {
 					console.error("Error getting document:", error);
 				});
 		},
-	}
+	},
 };
 </script>

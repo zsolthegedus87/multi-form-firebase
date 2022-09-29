@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 import { email, required } from "vuelidate/lib/validators";
 
 export default {
@@ -36,7 +36,7 @@ export default {
 		return {
 			email: "",
 			password: "",
-			error: ""
+			error: "",
 		};
 	},
 	methods: {
@@ -47,14 +47,14 @@ export default {
 				.then(() => {
 					this.$router.replace({ name: "secret" });
 				})
-				.catch(error => {
+				.catch((error) => {
 					this.error = error;
 				});
-		}
+		},
 	},
 	validations: {
 		email: { required, email },
-		password: { required }
+		password: { required },
 	},
 };
 </script>

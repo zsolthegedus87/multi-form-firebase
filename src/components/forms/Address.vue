@@ -32,7 +32,7 @@ import Steps from "@/components/common/Steps";
 export default {
 	name: "AddressForm",
 	components: {
-		Steps
+		Steps,
 	},
 	data() {
 		return {
@@ -52,7 +52,7 @@ export default {
 		address: {
 			street: { required },
 			city: { required },
-			country: { required }
+			country: { required },
 		},
 	},
 	methods: {

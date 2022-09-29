@@ -44,7 +44,7 @@ import Steps from "@/components/common/Steps";
 export default {
 	name: "PersonalForm",
 	components: {
-		Steps
+		Steps,
 	},
 	data() {
 		return {
@@ -52,7 +52,7 @@ export default {
 				firstname: "",
 				lastname: "",
 				gender: "female",
-				age: "Child (0-18)"
+				age: "Child (0-18)",
 			},
 			submitted: false,
 			hasError: false,
@@ -64,7 +64,7 @@ export default {
 	validations: {
 		user: {
 			firstname: { required },
-			lastname: { required }
+			lastname: { required },
 		},
 	},
 	methods: {
@@ -75,7 +75,7 @@ export default {
 				return;
 			}
 			this.$emit("submit-user-data", this.user);
-		}
+		},
 	},
 };
 </script>

@@ -26,11 +26,11 @@ import NavbarEnd from "@/components/NavbarEnd";
 export default {
 	name: "App",
 	components: {
-		NavbarEnd
+		NavbarEnd,
 	},
 	data() {
 		return {
-			menuToggle: false
+			menuToggle: false,
 		};
 	},
 };

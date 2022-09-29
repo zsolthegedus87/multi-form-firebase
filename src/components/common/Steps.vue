@@ -15,14 +15,14 @@ export default {
 	props: {
 		steps: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		stepActive: {
 			type: Number,
-			default: 1
+			default: 1,
 		},
 	},
-}
+};
 </script>
 
 <style lang="scss" scoped>

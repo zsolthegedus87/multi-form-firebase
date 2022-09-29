@@ -32,7 +32,7 @@ import Steps from "@/components/common/Steps";
 export default {
 	name: "AddressForm",
 	components: {
-		Steps
+		Steps,
 	},
 	data() {
 		return {
@@ -53,8 +53,8 @@ export default {
 			cemail: {
 				required,
 				email,
-				sameAsMail: sameAs('email')
-			}
+				sameAsMail: sameAs("email"),
+			},
 		},
 	},
 	methods: {

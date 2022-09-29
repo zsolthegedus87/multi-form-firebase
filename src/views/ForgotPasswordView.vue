@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 import { email, required } from "vuelidate/lib/validators";
 
 export default {
@@ -30,7 +30,7 @@ export default {
 			email: "",
 			password: "",
 			error: "",
-			emailSent: false
+			emailSent: false,
 		};
 	},
 	methods: {
@@ -41,18 +41,17 @@ export default {
 				.then(() => {
 					this.emailSent = true;
 				})
-				.catch(error => {
+				.catch((error) => {
 					this.emailSent = false;
 					this.error = error;
 				});
-		}
+		},
 	},
 	validations: {
 		email: { required, email },
-		password: { required }
+		password: { required },
 	},
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
